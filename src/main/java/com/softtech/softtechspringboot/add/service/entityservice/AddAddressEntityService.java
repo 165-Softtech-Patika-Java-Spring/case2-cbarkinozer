@@ -19,4 +19,10 @@ public class AddAddressEntityService {
     public Optional<AddAddress> findById(Long id){
         return addAddressDao.findById(id);
     }
+    public AddAddress save(AddAddress addAddress){
+        return addAddressDao.save(addAddress);
+    }
+    public void delete(AddAddress addAddress){
+        addAddressDao.delete(addAddress);
+    }
 }

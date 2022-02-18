@@ -29,7 +29,6 @@ public class AddAddressConverter {
 
     private AddAddressDto convertToAddAddressDto(AddAddress addAddress) {
         AddAddressDto addAddressDto = new AddAddressDto();
-        addAddressDto.setId(addAddress.getId());
         addAddressDto.setCountryId(addAddress.getCountryId());
         addAddressDto.setCityId(addAddress.getCityId());
         addAddressDto.setDistrictId(addAddress.getDistrictId());

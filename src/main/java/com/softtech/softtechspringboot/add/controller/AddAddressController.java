@@ -6,9 +6,7 @@ import com.softtech.softtechspringboot.add.service.AddAddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,4 +22,11 @@ public class AddAddressController {
         List<AddAddressDto> addAddressDaoList=addAddressService.findAll();
         return new ResponseEntity(addAddressDaoList, HttpStatus.OK);
     }
+
+    @PostMapping
+    public ResponseEntity save(@RequestBody AddAddressDto addAddressDto){
+        AddAddressDto addAddressDto1 = addAddressService.save(addAddressDto);
+        return new ResponseEntity(addAddressDto1, HttpStatus.OK);
+    }
+
 }

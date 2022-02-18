@@ -1,6 +1,7 @@
 package com.softtech.softtechspringboot.add.service;
 
 import com.softtech.softtechspringboot.add.converter.AddAddressConverter;
+import com.softtech.softtechspringboot.add.converter.AddAddressMapper;
 import com.softtech.softtechspringboot.add.dto.AddAddressDto;
 import com.softtech.softtechspringboot.add.entity.AddAddress;
 import com.softtech.softtechspringboot.add.service.entityservice.AddAddressEntityService;
@@ -17,10 +18,13 @@ public class AddAddressService {
 
     public List<AddAddressDto> findAll() {
         List<AddAddress> addAddressList = addAddressEntityService.findAll();
-        List<AddAddressDto> addAddressDtoList = addAddressConverter.convertToAddAddressDtoList(addAddressList);
-
-        return addAddressDtoList;
+        return addAddressConverter.convertToAddAddressDtoList(addAddressList);
     }
 
 
+    public AddAddressDto save(AddAddressDto addAddressDto) {
+       AddAddress addAddress = AddAddressMapper.INSTANCE.convertToAddAddress(addAddressDto);
+       addAddress = addAddressEntityService.save(addAddress);
+       return AddAddressMapper.INSTANCE.convertToAddAddressDto(addAddress);
+    }
 }
