@@ -27,5 +27,12 @@ Bir adet controller yazınız(Tek controller yeterli). Bu controller içerisinde
 15. Id den adres bilgisi edinilebilmelidir. 
  
 ### NOT:  
-- Address entitysi hariç diğer entitylerin servislerinde entity kullanabilirsiniz. Yani metot parametresi için dto, return için başka bir dto kullanmanıza gerek yok.  
+- Address entitysi hariç diğer entitylerin servislerinde entity kullanabilirsiniz.
+Yani metot parametresi için dto, return için başka bir dto kullanmanıza gerek yok.  
 - Address kaydeden dönen vs yerlerde mapper ya da converterlar kullanarak DTO ile veri akışını sağlayınız.
+
+### Design:
+![](../../../Pictures/Screenshots/Ekran Görüntüsü (254).png)
+Doors does not have name, they only have doorId.    
+In City, cityId is plate code.  
+Country has country code that is a unique abbreviation for country. For example: "TR" for Turkey.  
