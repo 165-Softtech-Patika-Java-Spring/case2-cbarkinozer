@@ -18,11 +18,8 @@ public class AddAddressConverter {
     public List<AddAddressDto> convertToAddAddressDtoList(List<AddAddress> addAddressList) {
         List<AddAddressDto> addAddressDtoList = new ArrayList<>();
         for(AddAddress addAddress: addAddressList){
-
             AddAddressDto addAddressDto = convertToAddAddressDto(addAddress);
-
             addAddressDtoList.add(addAddressDto);
-
         }
         return addAddressDtoList;
     }

@@ -2,9 +2,9 @@ package com.softtech.softtechspringboot.add.controller;
 
 
 import com.softtech.softtechspringboot.add.dto.AddAddressDto;
+import com.softtech.softtechspringboot.add.dto.AddAddressSaveRequestDto;
 import com.softtech.softtechspringboot.add.service.AddAddressService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,13 +20,33 @@ public class AddAddressController {
     @GetMapping
     public ResponseEntity findAll(){
         List<AddAddressDto> addAddressDaoList=addAddressService.findAll();
-        return new ResponseEntity(addAddressDaoList, HttpStatus.OK);
+        return ResponseEntity.ok(addAddressDaoList);
     }
 
-    @PostMapping
-    public ResponseEntity save(@RequestBody AddAddressDto addAddressDto){
-        AddAddressDto addAddressDto1 = addAddressService.save(addAddressDto);
-        return new ResponseEntity(addAddressDto1, HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity findById(@PathVariable Long id){
+        AddAddressDto addAddressDto =addAddressService.findById(id);
+        return ResponseEntity.ok(addAddressDto);
     }
+
+
+    @PostMapping
+    public ResponseEntity save(@RequestBody AddAddressSaveRequestDto addAddressSaveRequestDto){
+        AddAddressDto addAddressDto = addAddressService.save(addAddressSaveRequestDto);
+        return ResponseEntity.ok(addAddressDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity delete(@PathVariable Long id){
+        addAddressService.delete(id);
+        return ResponseEntity.ok(Void.TYPE);
+    }
+    @PutMapping
+    public ResponseEntity update(@RequestBody AddAddressDto addAddressDto){
+        AddAddressDto addAddressDtoUpdated = addAddressService.update(addAddressDto);
+        return ResponseEntity.ok(addAddressDtoUpdated);
+    }
+
+
 
 }

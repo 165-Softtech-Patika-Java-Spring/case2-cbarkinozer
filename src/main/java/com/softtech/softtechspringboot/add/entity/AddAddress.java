@@ -11,25 +11,25 @@ public class AddAddress {
     @GeneratedValue(generator="AddAddress")
     private Long id;
 
-    @Column(name="COUNTRY_ID",nullable = false)
+    @Column(name="ID_CNT_COUNTRY",nullable = false)
     private Long countryId;
 
-    @Column(name="CITY_ID",nullable = false)
+    @Column(name="ID_CTY_CITY",nullable = false)
     private Long cityId;
 
-    @Column(name="DISTRICT_ID",nullable = false)
+    @Column(name="ID_DST_DISTRICT",nullable = false)
     private Long districtId;
 
-    @Column(name="NEIGHBORHOOD_ID",nullable = false)
+    @Column(name="ID_NGH_NEIGHBORHOOD",nullable = false)
     private Long neighborhoodId;
 
-    @Column(name="STREET_ID",nullable = false)
+    @Column(name="ID_STR_STREET",nullable = false)
     private Long streetId;
 
-    @Column(name="BUILDING_ID",nullable = false)
+    @Column(name="ID_BLD_BUILDING",nullable = false)
     private Long buildingId;
 
-    @Column(name="DOOR_ID",nullable = false)
+    @Column(name="ID_DOR_DOOR",nullable = false)
     private Long doorId;
 
 }

@@ -3,8 +3,7 @@ package com.softtech.softtechspringboot.add.dto;
 import lombok.Data;
 
 @Data
-public class AddAddressDto {
-    private Long id;
+public class AddAddressSaveRequestDto {
     private Long countryId;
     private Long cityId;
     private Long districtId;
