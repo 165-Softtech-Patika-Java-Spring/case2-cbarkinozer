@@ -1,5 +1,6 @@
 package com.softtech.softtechspringboot.dor.entity;
 
+import com.softtech.softtechspringboot.bld.entity.BldBuilding;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,4 +19,11 @@ public class DorDoor {
 
     @Column(name="DOR_DOOR_NAME",nullable = true)
     private Long buildingName;
+
+    @ManyToOne(
+            fetch= FetchType.LAZY,
+            cascade=CascadeType.ALL,
+            optional=false)
+    private BldBuilding bldBuilding;
+
 }

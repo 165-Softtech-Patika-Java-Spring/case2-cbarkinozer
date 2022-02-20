@@ -1,5 +1,6 @@
 package com.softtech.softtechspringboot.bld.entity;
 
+import com.softtech.softtechspringboot.str.entity.StrStreet;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,4 +18,12 @@ public class BldBuilding {
 
     @Column(name="BLD_BUILDING_NAME",nullable = true)
     private Long buildingName;
+
+    @ManyToOne(
+            fetch= FetchType.LAZY,
+            cascade=CascadeType.ALL,
+            optional=false)
+    private StrStreet strStreet;
+
+
 }

@@ -26,20 +26,20 @@ public class AddAddressService {
         return addAddressConverter.convertToAddAddressDtoList(addAddressList);
     }
 
-    //15. find Adress by Id.
+
     public AddAddressDto findById(Long id) {
         AddAddress addAddress = addAddressEntityService.getByIdWithControl(id);
         return AddAddressMapper.INSTANCE.convertToAddAddressDto(addAddress);
 
     }
 
-    //13. Address is savable.
+
     public AddAddressDto save(AddAddressSaveRequestDto addAddressSaveRequestDto) {
        AddAddress addAddress = AddAddressMapper.INSTANCE.convertToAddAddress(addAddressSaveRequestDto);
        addAddress = addAddressEntityService.save(addAddress);
        return AddAddressMapper.INSTANCE.convertToAddAddressDto(addAddress);
     }
-    //14. Address is deletable .
+
     public void delete(Long id) {
        AddAddress addAddress = addAddressEntityService.getByIdWithControl(id);
        addAddressEntityService.delete(addAddress);

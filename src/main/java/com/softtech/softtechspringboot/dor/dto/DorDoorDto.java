@@ -6,6 +6,5 @@ import lombok.Data;
 public class DorDoorDto {
 
     private Long id;
-    private Long buildingId;
-    private Long buildingName;
+    private Long DoorId;
 }

@@ -23,19 +23,20 @@ public class AddAddressController {
         return ResponseEntity.ok(addAddressDaoList);
     }
 
+    //15. find Adress by Id.
     @GetMapping("/{id}")
     public ResponseEntity findById(@PathVariable Long id){
         AddAddressDto addAddressDto =addAddressService.findById(id);
         return ResponseEntity.ok(addAddressDto);
     }
 
-
+    //13. Address is savable.
     @PostMapping
     public ResponseEntity save(@RequestBody AddAddressSaveRequestDto addAddressSaveRequestDto){
         AddAddressDto addAddressDto = addAddressService.save(addAddressSaveRequestDto);
         return ResponseEntity.ok(addAddressDto);
     }
-
+    //14. Address is deletable .
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Long id){
         addAddressService.delete(id);
