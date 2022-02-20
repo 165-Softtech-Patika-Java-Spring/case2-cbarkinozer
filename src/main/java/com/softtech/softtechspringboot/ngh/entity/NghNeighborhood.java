@@ -1,5 +1,6 @@
 package com.softtech.softtechspringboot.ngh.entity;
 
+import com.softtech.softtechspringboot.dst.entity.DstDistrict;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -15,17 +16,15 @@ public class NghNeighborhood {
     private Long id;
 
     @Column(name="NGH_NEIGHBORHOOD_ID",nullable = false)
-    private String neighborhoodId;
+    private Long neighborhoodId;
 
     @Column(name="NGH_NEIGHBORHOOD_NAME",nullable = false)
     private String neighborhoodName;
 
-    /* TODO create district
     @ManyToOne(
             fetch= FetchType.LAZY,
             cascade=CascadeType.ALL,
             optional=false)
     private DstDistrict dstDistrict;
 
-     */
 }

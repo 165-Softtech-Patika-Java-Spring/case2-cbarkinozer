@@ -18,7 +18,7 @@ public class DorDoor {
     private Long buildingId;
 
     @Column(name="DOR_DOOR_NAME",nullable = true)
-    private Long buildingName;
+    private String buildingName;
 
     @ManyToOne(
             fetch= FetchType.LAZY,

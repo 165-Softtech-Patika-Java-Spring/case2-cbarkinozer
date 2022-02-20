@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class StrStreetSaveRequestDto {
-    private String streetId;
+    private Long streetId;
     private String streetName;
 }

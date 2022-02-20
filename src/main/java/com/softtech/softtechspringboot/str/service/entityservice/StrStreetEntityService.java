@@ -1,7 +1,6 @@
 package com.softtech.softtechspringboot.str.service.entityservice;
 
 
-import com.softtech.softtechspringboot.add.dao.AddAddressDao;
 import com.softtech.softtechspringboot.gen.service.BaseEntityService;
 import com.softtech.softtechspringboot.str.dao.StrStreetDao;
 import com.softtech.softtechspringboot.str.entity.StrStreet;
