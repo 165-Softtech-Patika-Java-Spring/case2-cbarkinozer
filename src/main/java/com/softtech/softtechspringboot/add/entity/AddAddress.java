@@ -1,6 +1,10 @@
 package com.softtech.softtechspringboot.add.entity;
+import com.softtech.softtechspringboot.cnt.entity.CntCountry;
 import lombok.Data;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="ADD_ADDRESS")
@@ -31,5 +35,13 @@ public class AddAddress {
 
     @Column(name="ID_DOR_DOOR",nullable = false)
     private Long doorId;
+
+    @OneToMany(
+            fetch= FetchType.LAZY,
+            mappedBy = "AddAddress",
+            targetEntity = CntCountry.class,
+            orphanRemoval = true)
+
+    private Set cities = new HashSet();
 
 }
