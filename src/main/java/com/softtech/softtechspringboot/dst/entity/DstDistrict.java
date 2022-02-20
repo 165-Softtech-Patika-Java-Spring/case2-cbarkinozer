@@ -1,5 +1,6 @@
 package com.softtech.softtechspringboot.dst.entity;
 
+import com.softtech.softtechspringboot.cty.entity.CtyCity;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -19,4 +20,11 @@ public class DstDistrict {
 
     @Column(name="DST_DISTRICT_NAME",nullable = false)
     private String districtName;
+
+
+    @ManyToOne(
+            fetch= FetchType.LAZY,
+            cascade=CascadeType.ALL,
+            optional=false)
+    private CtyCity ctyCity;
 }
