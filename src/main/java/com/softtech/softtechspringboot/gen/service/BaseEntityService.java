@@ -22,9 +22,6 @@ public class BaseEntityService<E, D extends JpaRepository<E, Long>> {
     public Optional<E> findById(Long id){
         return dao.findById(id);
     }
-    public Optional<E> findByOne(String string){
-        return dao.findOne(string);
-    }
 
     public E save(E entity){
         return dao.save(entity);

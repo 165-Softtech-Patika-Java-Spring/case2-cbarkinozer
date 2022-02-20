@@ -1,5 +1,6 @@
 package com.softtech.softtechspringboot.cty.entity;
 
+import com.softtech.softtechspringboot.cnt.entity.CntCountry;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -20,7 +21,7 @@ public class CtyCity {
     @Column(name="CTY_CITY_NAME",nullable = false)
     private String cityName;
 
-    @Column(name="CTY_CITY_PLATE_CODE",length=2, nullable = false)
+    @Column(name="CTY_CITY_PLATE_CODE",length=10, nullable = false)
     private String plateCode;
 
     @ManyToOne(
