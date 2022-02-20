@@ -1,4 +1,4 @@
-package com.softtech.softtechspringboot.dor.gen.exception;
+package com.softtech.softtechspringboot.gen.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

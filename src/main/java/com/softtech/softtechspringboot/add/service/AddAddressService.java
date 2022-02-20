@@ -7,7 +7,7 @@ import com.softtech.softtechspringboot.add.dto.AddAddressSaveRequestDto;
 import com.softtech.softtechspringboot.add.entity.AddAddress;
 import com.softtech.softtechspringboot.add.enums.AddErrorMessage;
 import com.softtech.softtechspringboot.add.service.entityservice.AddAddressEntityService;
-import com.softtech.softtechspringboot.dor.gen.exceptions.ItemNotFoundException;
+import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;

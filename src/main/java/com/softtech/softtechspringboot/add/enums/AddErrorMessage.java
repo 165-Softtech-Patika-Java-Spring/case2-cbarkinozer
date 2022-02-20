@@ -1,6 +1,6 @@
 package com.softtech.softtechspringboot.add.enums;
 
-import com.softtech.softtechspringboot.dor.gen.enums.BaseErrorMessage;
+import com.softtech.softtechspringboot.gen.enums.BaseErrorMessage;
 
 public enum AddErrorMessage implements BaseErrorMessage {
 

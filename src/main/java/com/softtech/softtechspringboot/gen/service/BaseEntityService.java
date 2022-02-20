@@ -1,7 +1,7 @@
-package com.softtech.softtechspringboot.dor.gen.service;
+package com.softtech.softtechspringboot.gen.service;
 
-import com.softtech.softtechspringboot.dor.gen.enums.GenErrorMessage;
-import com.softtech.softtechspringboot.dor.gen.exceptions.ItemNotFoundException;
+import com.softtech.softtechspringboot.gen.enums.GenErrorMessage;
+import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

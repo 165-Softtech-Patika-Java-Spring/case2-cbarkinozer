@@ -23,7 +23,7 @@ public class AddAddressController {
         return ResponseEntity.ok(addAddressDaoList);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity findById(@PathVariable Long id){
         AddAddressDto addAddressDto =addAddressService.findById(id);
         return ResponseEntity.ok(addAddressDto);

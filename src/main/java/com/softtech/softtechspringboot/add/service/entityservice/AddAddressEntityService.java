@@ -2,7 +2,7 @@ package com.softtech.softtechspringboot.add.service.entityservice;
 
 import com.softtech.softtechspringboot.add.dao.AddAddressDao;
 import com.softtech.softtechspringboot.add.entity.AddAddress;
-import com.softtech.softtechspringboot.dor.gen.service.BaseEntityService;
+import com.softtech.softtechspringboot.gen.service.BaseEntityService;
 import org.springframework.stereotype.Service;
 
 @Service

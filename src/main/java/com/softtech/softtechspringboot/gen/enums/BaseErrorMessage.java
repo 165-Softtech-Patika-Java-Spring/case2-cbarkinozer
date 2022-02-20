@@ -1,4 +1,4 @@
-package com.softtech.softtechspringboot.dor.gen.enums;
+package com.softtech.softtechspringboot.gen.enums;
 
 public interface BaseErrorMessage {
 

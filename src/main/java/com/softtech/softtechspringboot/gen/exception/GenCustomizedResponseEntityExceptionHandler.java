@@ -1,6 +1,6 @@
-package com.softtech.softtechspringboot.dor.gen.exception;
+package com.softtech.softtechspringboot.gen.exception;
 
-import com.softtech.softtechspringboot.dor.gen.exceptions.ItemNotFoundException;
+import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
