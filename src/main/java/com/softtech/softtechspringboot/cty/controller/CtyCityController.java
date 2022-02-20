@@ -17,11 +17,12 @@ public class CtyCityController {
         CtyCityDto ctyCityDto = ctyCityService.save(ctyCitySaveRequestDto);
         return ResponseEntity.ok(ctyCityDto);
     }
+    /*
     //4. Query city from plateCode
     @GetMapping("/{plateCode}")
     public ResponseEntity findByPlateCode(@PathVariable String plateCode){
         CtyCityDto ctyCityDto =ctyCityService.findOne(plateCode);
         return ResponseEntity.ok(ctyCityDto);
     }
-
+    */
 }
