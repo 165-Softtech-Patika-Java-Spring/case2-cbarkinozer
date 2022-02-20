@@ -2,7 +2,6 @@ package com.softtech.softtechspringboot.dst.dto;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 
 @Data
 public class DstDistrictDto {

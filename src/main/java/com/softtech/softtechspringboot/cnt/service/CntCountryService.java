@@ -6,6 +6,7 @@ import com.softtech.softtechspringboot.cnt.dto.CntCountrySaveRequestDto;
 import com.softtech.softtechspringboot.cnt.entity.CntCountry;
 import com.softtech.softtechspringboot.cnt.service.entityservice.CntCountryEntityService;
 import com.softtech.softtechspringboot.cty.converter.CtyCityMapper;
+import com.softtech.softtechspringboot.cty.dto.CtyCityDto;
 import com.softtech.softtechspringboot.cty.entity.CtyCity;
 import com.softtech.softtechspringboot.cty.service.entityservice.CtyCityEntityService;
 import lombok.RequiredArgsConstructor;
@@ -20,11 +21,11 @@ public class CntCountryService {
         cntCountry = cntCountryEntityService.save(cntCountry);
         return CntCountryMapper.INSTANCE.convertToCntCountryDto(cntCountry);
     }
-    /*
-    public CntCountryDto findOne(String countryCode) {
+
+    public CntCountryDto findByCountryCode(String countryCode) {
         CntCountry cntCountry = cntCountryEntityService.getByCountryCodeWithControl(countryCode);
         return CntCountryMapper.INSTANCE.convertToCntCountryDto(cntCountry);
     }
-    */
+
 
 }

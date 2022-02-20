@@ -22,6 +22,7 @@ public class StrStreet {
             fetch= FetchType.LAZY,
             cascade=CascadeType.ALL,
             optional=false)
+
     private NghNeighborhood nghNeighborhood;
 
 

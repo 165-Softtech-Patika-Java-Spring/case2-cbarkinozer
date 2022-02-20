@@ -21,7 +21,7 @@ public class CntCountry {
     @Column(name="CTY_CITY_NAME",nullable = false)
     private String countryName;
 
-    @Column(name="CNT_COUNTRY_CODE",length=2, nullable = false)
+    @Column(name="CNT_COUNTRY_CODE",length=5, nullable = false)
     private String countryCode;
 
     @ManyToOne(

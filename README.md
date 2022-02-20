@@ -11,9 +11,9 @@ Bir adreste bulunması gereken alanlar:
 -  Daire No 
 Bir adet controller yazınız(Tek controller yeterli). Bu controller içerisinde aşağıdaki işlemler yapılabilmelidir.  
 1. Ülke kaydedilebilmelidir. ✓
-2. Ülke kodundan ülke sorgulanabilmelidir. ✗
+2. Ülke kodundan ülke sorgulanabilmelidir. ✓
 3. Şehir kaydedilebilmelidir. ✓
-4. Plakadan şehir bilgisi sorgulanabilmelidir. ✗
+4. Plakadan şehir bilgisi sorgulanabilmelidir. ✓
 5. İlçe  kaydedilebilmelidir. ✓
 6. Bir ile ait ilçeler sorgulanabilmelidir.✓
 7. Mahalle kaydedilebilmelidir. ✓
@@ -31,8 +31,20 @@ Bir adet controller yazınız(Tek controller yeterli). Bu controller içerisinde
 Yani metot parametresi için dto, return için başka bir dto kullanmanıza gerek yok.  
 - Address kaydeden dönen vs yerlerde mapper ya da converterlar kullanarak DTO ile veri akışını sağlayınız. ✓
 
-### Design:
-Table Design Image:  https://ibb.co/Xs8S5Wc
-Doors does not have name, they only have doorId.    
+### Design:  
+Table Design Image:  https://ibb.co/Xs8S5Wc    
+Note: plateCode renamed as cityCode.   
+Doors does not have name, they only have doorId.      
 In City, cityId is plate code.  
-Country has country code that is a unique abbreviation for country. For example: "TR" for Turkey.  
+Country has country code that is a unique abbreviation for country. For example: "TR" for Turkey.    
+
+### TODO:  
+Fix table relations (@onetomany etc.)    
+Fix remaining errors  
+Test on Swagger  
+
+## Remaining errors:  
+AddAddress 42 'One To Many' attribute target should be Entity
+AddAddress 45 'One To Many' attribute value type should not be 'CntCountry'
+CntCountryDao 12 Cannot resolve symbol CNT_COUNTRY
+CtyCityDao 14 Cannot resolve symbol 'CTY_CITY' 

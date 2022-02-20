@@ -1,12 +1,9 @@
 package com.softtech.softtechspringboot.ngh.controller;
 
 
-import com.softtech.softtechspringboot.add.dto.AddAddressDto;
 import com.softtech.softtechspringboot.ngh.dto.NghNeighborhoodDto;
 import com.softtech.softtechspringboot.ngh.dto.NghNeighborhoodSaveRequestDto;
 import com.softtech.softtechspringboot.ngh.service.NghNeighborhoodService;
-import com.softtech.softtechspringboot.str.dto.StrStreetDto;
-import com.softtech.softtechspringboot.str.dto.StrStreetSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +15,7 @@ public class NghNeighborhoodController {
     private final NghNeighborhoodService nghNeighborhoodService;
 
     //7. Neighborhood is savable
+    @PostMapping
     public ResponseEntity save(@RequestBody NghNeighborhoodSaveRequestDto nghNeighborhoodSaveRequestDto){
         NghNeighborhoodDto nghNeighborhoodDto = nghNeighborhoodService.save(nghNeighborhoodSaveRequestDto);
         return ResponseEntity.ok(nghNeighborhoodDto);

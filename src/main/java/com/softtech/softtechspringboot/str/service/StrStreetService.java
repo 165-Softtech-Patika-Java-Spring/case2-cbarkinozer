@@ -1,10 +1,6 @@
 package com.softtech.softtechspringboot.str.service;
 
 
-import com.softtech.softtechspringboot.add.converter.AddAddressMapper;
-import com.softtech.softtechspringboot.add.dto.AddAddressDto;
-import com.softtech.softtechspringboot.add.entity.AddAddress;
-import com.softtech.softtechspringboot.add.enums.AddErrorMessage;
 import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import com.softtech.softtechspringboot.str.converter.StrStreetMapper;
 import com.softtech.softtechspringboot.str.dto.StrStreetDto;

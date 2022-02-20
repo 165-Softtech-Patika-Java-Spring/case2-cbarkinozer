@@ -3,7 +3,6 @@ package com.softtech.softtechspringboot.dst.controller;
 import com.softtech.softtechspringboot.dst.dto.DstDistrictDto;
 import com.softtech.softtechspringboot.dst.dto.DstDistrictSaveRequestDto;
 import com.softtech.softtechspringboot.dst.service.DstDistrictService;
-import com.softtech.softtechspringboot.ngh.dto.NghNeighborhoodDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

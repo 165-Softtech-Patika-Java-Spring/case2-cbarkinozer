@@ -1,8 +1,5 @@
 package com.softtech.softtechspringboot.ngh.service;
 
-import com.softtech.softtechspringboot.add.converter.AddAddressMapper;
-import com.softtech.softtechspringboot.add.dto.AddAddressDto;
-import com.softtech.softtechspringboot.add.entity.AddAddress;
 import com.softtech.softtechspringboot.add.enums.AddErrorMessage;
 import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import com.softtech.softtechspringboot.ngh.converter.NghNeighborhoodMapper;

@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+/*
+*   Example convertions without using mappers.
+*
+*/
 
 @Service
 @RequiredArgsConstructor

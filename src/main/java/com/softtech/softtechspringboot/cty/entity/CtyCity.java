@@ -21,8 +21,8 @@ public class CtyCity {
     @Column(name="CTY_CITY_NAME",nullable = false)
     private String cityName;
 
-    @Column(name="CTY_CITY_PLATE_CODE",length=10, nullable = false)
-    private String plateCode;
+    @Column(name="CTY_CITY_CODE",length=20, nullable = false)
+    private String cityCode;
 
     @ManyToOne(
             fetch= FetchType.LAZY,

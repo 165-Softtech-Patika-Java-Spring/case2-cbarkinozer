@@ -18,10 +18,10 @@ public class CtyCityService {
         ctyCity = ctyCityEntityService.save(ctyCity);
         return CtyCityMapper.INSTANCE.convertToCtyCityDto(ctyCity);
     }
-    /*
-    public CtyCityDto findOne(String plateCode) {
-        CtyCity ctyCity = ctyCityEntityService.getByPlateCodeWithControl(plateCode);
+
+    public CtyCityDto findByCityCode(String cityCode) {
+        CtyCity ctyCity = ctyCityEntityService.getByCityCodeWithControl(cityCode);
         return CtyCityMapper.INSTANCE.convertToCtyCityDto(ctyCity);
     }
-    */
+
 }

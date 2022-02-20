@@ -6,5 +6,5 @@ import lombok.Data;
 public class CtyCitySaveRequestDto {
     private Long cityId;
     private String cityName;
-    private String plateCode;
+    private String cityCode;
 }
