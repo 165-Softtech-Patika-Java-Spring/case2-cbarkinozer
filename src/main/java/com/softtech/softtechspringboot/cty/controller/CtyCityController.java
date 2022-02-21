@@ -18,9 +18,9 @@ public class CtyCityController {
         return ResponseEntity.ok(ctyCityDto);
     }
 
-    //4. Query city from plateCode
+    //4. Query city from plateCode(cityCode)
     @GetMapping("/{cityCode}")
-    public ResponseEntity findByPlateCode(@PathVariable String cityCode){
+    public ResponseEntity findByCityCode(@PathVariable Long cityCode){
         CtyCityDto ctyCityDto =ctyCityService.findByCityCode(cityCode);
         return ResponseEntity.ok(ctyCityDto);
     }

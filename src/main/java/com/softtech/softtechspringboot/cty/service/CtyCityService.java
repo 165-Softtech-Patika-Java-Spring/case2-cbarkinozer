@@ -19,8 +19,8 @@ public class CtyCityService {
         return CtyCityMapper.INSTANCE.convertToCtyCityDto(ctyCity);
     }
 
-    public CtyCityDto findByCityCode(String cityCode) {
-        CtyCity ctyCity = ctyCityEntityService.getByCityCodeWithControl(cityCode);
+    public CtyCityDto findByCityCode(Long cityCode) {
+        CtyCity ctyCity = ctyCityEntityService.getByIdWithControl(cityCode);
         return CtyCityMapper.INSTANCE.convertToCtyCityDto(ctyCity);
     }
 
