@@ -22,7 +22,7 @@ public class DstDistrictController {
     //6. Query districts that belongs to a city
     @GetMapping("/{cityId}")
     public ResponseEntity findByDistrictId(@PathVariable Long cityId){
-        DstDistrictDto dstDistrictDto =dstDistrictService.findById(cityId);
+        DstDistrictDto dstDistrictDto =dstDistrictService.findByCityId(cityId);
         return ResponseEntity.ok(dstDistrictDto);
     }
 }

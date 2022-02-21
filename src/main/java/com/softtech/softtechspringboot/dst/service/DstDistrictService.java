@@ -19,8 +19,8 @@ public class DstDistrictService {
         return DstDistrictMapper.INSTANCE.convertToDstDistrictDto(dstDistrict);
     }
 
-    public DstDistrictDto findById(Long cityId) {
-        DstDistrict dstDistrict = dstDistrictEntityService.getByIdWithControl(cityId);
+    public DstDistrictDto findByCityId(Long cityId) {
+        DstDistrict dstDistrict = dstDistrictEntityService.getByCityCodeWithControl(cityId);
         return DstDistrictMapper.INSTANCE.convertToDstDistrictDto(dstDistrict);
     }
 }

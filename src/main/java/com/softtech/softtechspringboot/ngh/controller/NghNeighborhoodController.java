@@ -29,7 +29,7 @@ public class NghNeighborhoodController {
     //9. Query neighborhoods that belongs to a district
     @GetMapping("/{districtId}")
     public ResponseEntity findByDistrictId(@PathVariable Long districtId){
-        NghNeighborhoodDto nghNeighborhoodDto =nghNeighborhoodService.findById(districtId);
+        NghNeighborhoodDto nghNeighborhoodDto =nghNeighborhoodService.findByDistrictId(districtId);
         return ResponseEntity.ok(nghNeighborhoodDto);
     }
 

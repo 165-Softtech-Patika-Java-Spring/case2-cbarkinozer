@@ -6,14 +6,14 @@ import com.softtech.softtechspringboot.ngh.converter.NghNeighborhoodMapper;
 import com.softtech.softtechspringboot.ngh.dto.NghNeighborhoodDto;
 import com.softtech.softtechspringboot.ngh.dto.NghNeighborhoodSaveRequestDto;
 import com.softtech.softtechspringboot.ngh.entity.NghNeighborhood;
-import com.softtech.softtechspringboot.ngh.service.entityservice.NgrNeighborhoodEntityService;
+import com.softtech.softtechspringboot.ngh.service.entityservice.NghNeighborhoodEntityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class NghNeighborhoodService {
-    private final NgrNeighborhoodEntityService nghNeighborhoodEntityService;
+    private final NghNeighborhoodEntityService nghNeighborhoodEntityService;
 
     public NghNeighborhoodDto save(NghNeighborhoodSaveRequestDto nghNeighborhoodSaveRequestDto) {
         NghNeighborhood nghNeighborhood = NghNeighborhoodMapper.INSTANCE.convertToNghNeighborhood(nghNeighborhoodSaveRequestDto);
@@ -36,8 +36,8 @@ public class NghNeighborhoodService {
         }
     }
 
-    public NghNeighborhoodDto findById(Long id) {
-        NghNeighborhood nghNeighborhood = nghNeighborhoodEntityService.getByIdWithControl(id);
+    public NghNeighborhoodDto findByDistrictId(Long id) {
+        NghNeighborhood nghNeighborhood = nghNeighborhoodEntityService.getByDistrictIdWithControl(id);
         return NghNeighborhoodMapper.INSTANCE.convertToNghNeighborhoodDto(nghNeighborhood);
     }
 
