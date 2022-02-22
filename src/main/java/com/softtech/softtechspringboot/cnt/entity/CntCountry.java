@@ -1,10 +1,11 @@
 package com.softtech.softtechspringboot.cnt.entity;
 
-import com.softtech.softtechspringboot.add.entity.AddAddress;
+import com.softtech.softtechspringboot.cty.entity.CtyCity;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @RequiredArgsConstructor
@@ -24,9 +25,6 @@ public class CntCountry {
     @Column(name="CNT_COUNTRY_CODE",length=5, nullable = false)
     private String countryCode;
 
-    @ManyToOne(
-            fetch= FetchType.LAZY,
-            cascade=CascadeType.ALL,
-            optional=false)
-    private AddAddress addAddress;
+    @OneToMany(mappedBy = "CntCountry",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<CtyCity> cities;
 }

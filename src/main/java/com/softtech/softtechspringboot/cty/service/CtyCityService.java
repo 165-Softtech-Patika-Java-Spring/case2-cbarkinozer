@@ -4,7 +4,9 @@ import com.softtech.softtechspringboot.cty.converter.CtyCityMapper;
 import com.softtech.softtechspringboot.cty.dto.CtyCityDto;
 import com.softtech.softtechspringboot.cty.dto.CtyCitySaveRequestDto;
 import com.softtech.softtechspringboot.cty.entity.CtyCity;
+import com.softtech.softtechspringboot.cty.enums.CtyErrorMessage;
 import com.softtech.softtechspringboot.cty.service.entityservice.CtyCityEntityService;
+import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,10 @@ public class CtyCityService {
     public CtyCityDto findByCityCode(Long cityCode) {
         CtyCity ctyCity = ctyCityEntityService.getByIdWithControl(cityCode);
         return CtyCityMapper.INSTANCE.convertToCtyCityDto(ctyCity);
+    }
+
+    public CtyCity getById(long id){
+        return ctyCityEntityService.findById(id).orElseThrow(() -> new ItemNotFoundException(CtyErrorMessage.CITY_ERROR_MESSAGE));
     }
 
 }

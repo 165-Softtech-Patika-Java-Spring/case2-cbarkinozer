@@ -19,6 +19,6 @@ public interface NghNeighborhoodMapper {
 
     NghNeighborhood convertToNghNeighborhood(NghNeighborhoodDto nghNeighborhoodDto);
     NghNeighborhood convertToNghNeighborhood(NghNeighborhoodSaveRequestDto nghNeighborhoodSaveRequestDto);
-    List<NghNeighborhoodDto> convertToNghNeighborhoodDtoList(List<NghNeighborhood> nghNeighborhoodList);
+    List<NghNeighborhoodDto> convertToNeighborhoodDtoList(List<NghNeighborhood> nghNeighborhoodList);
     NghNeighborhoodDto convertToNghNeighborhoodDto(NghNeighborhood nghNeighborhood);
 }

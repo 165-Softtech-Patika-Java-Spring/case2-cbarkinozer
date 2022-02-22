@@ -1,12 +1,13 @@
 package com.softtech.softtechspringboot.add.service;
 
-import com.softtech.softtechspringboot.add.converter.AddAddressConverter;
 import com.softtech.softtechspringboot.add.converter.AddAddressMapper;
 import com.softtech.softtechspringboot.add.dto.AddAddressDto;
 import com.softtech.softtechspringboot.add.dto.AddAddressSaveRequestDto;
 import com.softtech.softtechspringboot.add.entity.AddAddress;
 import com.softtech.softtechspringboot.add.enums.AddErrorMessage;
 import com.softtech.softtechspringboot.add.service.entityservice.AddAddressEntityService;
+import com.softtech.softtechspringboot.cnt.converter.CntCountryMapper;
+import com.softtech.softtechspringboot.cnt.entity.CntCountry;
 import com.softtech.softtechspringboot.gen.exceptions.ItemNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,13 +18,11 @@ import java.util.List;
 public class AddAddressService {
 
     private final AddAddressEntityService addAddressEntityService;
-    private final AddAddressConverter addAddressConverter;
-
 
 
     public List<AddAddressDto> findAll() {
         List<AddAddress> addAddressList = addAddressEntityService.findAll();
-        return addAddressConverter.convertToAddAddressDtoList(addAddressList);
+        return AddAddressMapper.INSTANCE.convertToAddAddressDtoList(addAddressList);
     }
 
 

@@ -1,10 +1,12 @@
 package com.softtech.softtechspringboot.cty.entity;
 
 import com.softtech.softtechspringboot.cnt.entity.CntCountry;
+import com.softtech.softtechspringboot.dst.entity.DstDistrict;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @RequiredArgsConstructor
@@ -24,11 +26,12 @@ public class CtyCity {
     @Column(name="CTY_CITY_CODE",nullable = false)
     private Long cityCode;
 
-    @ManyToOne(
-            fetch= FetchType.LAZY,
-            cascade=CascadeType.ALL,
-            optional=false)
+
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private CntCountry cntCountry;
+
+    @OneToMany(mappedBy = "city",fetch = FetchType.LAZY)
+    private List<DstDistrict> dstDistrictList;
 
 
 }

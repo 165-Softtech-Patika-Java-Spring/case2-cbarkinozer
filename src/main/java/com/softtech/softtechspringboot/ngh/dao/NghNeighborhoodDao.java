@@ -6,8 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface NghNeighborhoodDao extends JpaRepository<NghNeighborhood,Long> {
-    @Query(value="SELECT FROM LEFT JOIN ON")
-    NghNeighborhood getNeighborhoodByDistrictId(@Param("districtId") Long districtId);
+    NghNeighborhood getNeighborhoodByDistrictId(long districtId);
 }

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CntCountryDao extends JpaRepository<CntCountry,Long> {
-    @Query(value="SELECT country FROM CntCountry country WHERE country.countryCode LIKE %:account.countryCode%")
-    CntCountry getCountryByCountryCode(@Param("countryCode") String countryCode);
+    CntCountry getCountryByCountryCode(String countryCode);
 
 }

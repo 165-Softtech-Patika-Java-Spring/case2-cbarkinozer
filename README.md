@@ -42,7 +42,5 @@ Country has country code that is a unique abbreviation for country. For example:
 Fix remaining errors    
 Test on Swagger  
 
-## Remaining errors:  
-AddAddress 42 'One To Many' attribute target should be Entity.  
-AddAddress 45 'One To Many' attribute value type should not be 'CntCountry'.  
-CntCountryDao 12 Cannot resolve symbol CNT_COUNTRY.   
+## Remaining errors:   
+'Many To One' attribute type should not be '****' 24,26,28,30

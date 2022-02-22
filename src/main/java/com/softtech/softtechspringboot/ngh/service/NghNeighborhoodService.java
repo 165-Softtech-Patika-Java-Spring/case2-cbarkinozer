@@ -37,8 +37,8 @@ public class NghNeighborhoodService {
     }
 
     public NghNeighborhoodDto findByDistrictId(Long id) {
-        NghNeighborhood nghNeighborhood = nghNeighborhoodEntityService.getByDistrictIdWithControl(id);
-        return NghNeighborhoodMapper.INSTANCE.convertToNghNeighborhoodDto(nghNeighborhood);
+        NghNeighborhoodDto nghNeighborhoodDto = nghNeighborhoodEntityService.getByDistrictIdWithControl(id);
+        return nghNeighborhoodDto ;
     }
 
 

@@ -1,10 +1,12 @@
 package com.softtech.softtechspringboot.ngh.entity;
 
 import com.softtech.softtechspringboot.dst.entity.DstDistrict;
+import com.softtech.softtechspringboot.str.entity.StrStreet;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Table(name="NGH_NEIGHBORHOOD")
@@ -21,10 +23,10 @@ public class NghNeighborhood {
     @Column(name="NGH_NEIGHBORHOOD_NAME",nullable = false)
     private String neighborhoodName;
 
-    @ManyToOne(
-            fetch= FetchType.LAZY,
-            cascade=CascadeType.ALL,
-            optional=false)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private DstDistrict dstDistrict;
+
+    @OneToMany(mappedBy = "NghNeighborhood",fetch = FetchType.LAZY)
+    private List<StrStreet> strStreetList;
 
 }

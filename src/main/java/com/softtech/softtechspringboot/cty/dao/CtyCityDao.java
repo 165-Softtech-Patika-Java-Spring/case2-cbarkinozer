@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CtyCityDao extends JpaRepository<CtyCity,Long> {
-
+    CtyCity getCityByPlateCode(String plateCode);
 }

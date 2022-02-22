@@ -14,5 +14,4 @@ public class CtyCityEntityService extends BaseEntityService<CtyCity, CtyCityDao>
     }
 
 
-
 }
